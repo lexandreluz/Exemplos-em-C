@@ -34,6 +34,7 @@ int exercicio2 (int m, int n, int o){
 void exercicio3 (){
 	int m[2], n[2], o[2];
 	printf("\nMATRIZ DE VETORES\n");
+	printf("DIGITE SEIS VALORES PARA CONSTRUIR A MATRIZ\n");
 	printf("Digite o primeiro valor: ");
 	scanf("%d", &m[0]);
 	printf("Digite o segundo valor: ");
@@ -102,6 +103,15 @@ int exercicio5 (int m, int n){
 	return 0;
 }
 
+// Exercicio 6 - Calcular o fatorial de um número
+int exercicio6 (int n){
+	int fatorial = 1;
+	for (int i = n; i >= 1; i--){
+		fatorial = fatorial * i;
+	}
+	return fatorial;
+}
+
 
 int main(void){
 	int valor, a, b, c;
@@ -111,6 +121,7 @@ int main(void){
 	printf("\n3 - MATRIZ VETORIAL");
 	printf("\n4 - MATRIZ COM TAMANHO VARIÁVEL");
 	printf("\n5 - MATRIZ COM TAMANHO VARIÁVEL DOBRADA");
+	printf("\n6 - FATORIAL");
 	printf("\nEscolha qual programinha você vai querer rodar: ");
 	scanf("%d", &valor);
 	printf("\n");
@@ -158,6 +169,19 @@ int main(void){
 		printf("Quantidade de COLUNAS: ");
 		scanf("%d", &b);
 		exercicio5(a, b);
+		break;
+
+		case 6:
+		printf("FATORIAL\n");
+		printf("Digite um valor: ");
+		scanf("%d,", &a);
+		if (a > 0){
+			b = exercicio6(a);
+			printf("O resultado do fatorial é: %d", b);
+		}
+		else {
+			printf("\nVocê deve inserir um número maior que 0");
+		}
 		break;
 
 		default:
