@@ -112,6 +112,19 @@ int exercicio6 (int n){
 	return fatorial;
 }
 
+// Exercicio 7 - Faça um programa que receba 10 valores. Some os 
+int exercicio7 (){
+	int tamanho, vec[tamanho], j = 1, soma;
+	printf("Quantos valores você quer somar?: ");
+	scanf("%d", &tamanho);
+	for (int i; i < tamanho; i++){
+		printf("Digite o %dº valor: ", j++);
+		scanf("%d", &vec[i]);
+		soma = vec[i] + soma;
+	}
+	printf("\nA soma dos 10 elementos é: %d", soma);
+	return 0;
+}
 
 int main(void){
 	int valor, a, b, c;
@@ -122,6 +135,7 @@ int main(void){
 	printf("\n4 - MATRIZ COM TAMANHO VARIÁVEL");
 	printf("\n5 - MATRIZ COM TAMANHO VARIÁVEL DOBRADA");
 	printf("\n6 - FATORIAL");
+	printf("\n7 - SOMATÓRIO");
 	printf("\nEscolha qual programinha você vai querer rodar: ");
 	scanf("%d", &valor);
 	printf("\n");
@@ -182,6 +196,10 @@ int main(void){
 		else {
 			printf("\nVocê deve inserir um número maior que 0");
 		}
+		break;
+
+		case 7:
+		exercicio7();
 		break;
 
 		default:
